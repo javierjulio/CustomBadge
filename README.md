@@ -1,6 +1,6 @@
 # CustomBadge
 
-This fork incorporates several pull requests and further changes by me to clean up the code by removing unnecessary actions, updating Xcode project and setting better standards/defaults.
+This fork includes further changes by me that has removed any unnecessary code, updated to current standards, converted to Objective-C ARC, and recreated the project using Xcode 5.1 Single View project template.
 
 ## Original README Contents
 
