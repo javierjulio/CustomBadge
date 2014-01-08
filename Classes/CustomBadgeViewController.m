@@ -102,13 +102,6 @@
 	[self.view addSubview:imageView];
 	[imageView release];
 	*/
-
-}
-
-
-- (void)dealloc
-{
-  [super dealloc];
 }
 
 @end

@@ -3,18 +3,17 @@
 //  CustomBadge
 //
 
-
 #import <UIKit/UIKit.h>
 
 @class CustomBadgeViewController;
 
 @interface CustomBadgeAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    CustomBadgeViewController *viewController;
+    UIWindow *__weak window;
+    CustomBadgeViewController *__weak viewController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet CustomBadgeViewController *viewController;
+@property (weak, nonatomic) IBOutlet UIWindow *window;
+@property (weak, nonatomic) IBOutlet CustomBadgeViewController *viewController;
 
 @end
 

@@ -3,7 +3,6 @@
 //  CustomBadge
 //
 
-
 #import "CustomBadgeAppDelegate.h"
 #import "CustomBadgeViewController.h"
 
@@ -11,7 +10,6 @@
 
 @synthesize window;
 @synthesize viewController;
-
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -74,13 +72,5 @@
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
      */
 }
-
-
-- (void)dealloc {
-    [viewController release];
-    [window release];
-    [super dealloc];
-}
-
 
 @end
