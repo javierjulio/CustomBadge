@@ -24,17 +24,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface CustomBadge : UIView {
-	
-	NSString *__weak badgeText;
-	UIColor *__weak badgeTextColor;
-	UIColor *__weak badgeInsetColor;
-	UIColor *__weak badgeFrameColor;
-	BOOL badgeFrame;
-	BOOL badgeShining;
-	CGFloat badgeCornerRoundness;
-	CGFloat badgeScaleFactor;
-}
+@interface CustomBadge : UIView
 
 @property(weak, nonatomic) NSString *badgeText;
 @property(weak, nonatomic) UIColor *badgeTextColor;
