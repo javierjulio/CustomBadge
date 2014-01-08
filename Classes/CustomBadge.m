@@ -1,5 +1,7 @@
 /*
  CustomBadge.m
+
+ Further changes by Javier Julio (https://github.com/javierjulio/CustomBadge)
  
 *** Description: ***
  With this class you can draw a typical iOS badge indicator with a custom text on any view.
@@ -17,9 +19,7 @@
  your copyright section. Thanks.
  
  If you have any questions please feel free to contact me (open@spaulus.com).
-
  */
-
 
 #import "CustomBadge.h"
 

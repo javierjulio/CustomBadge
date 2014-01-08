@@ -1,6 +1,8 @@
 /*
  CustomBadge.h
  
+ Further changes by Javier Julio (https://github.com/javierjulio/CustomBadge)
+ 
 *** Description: ***
  With this class you can draw a typical iOS badge indicator with a custom text on any view.
  Please use the allocator customBadgeWithString to create a new badge.
@@ -17,9 +19,7 @@
  your copyright section. Thanks.
  
  If you have any questions please feel free to contact me (open@spaulus.com).
-
  */
-
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
