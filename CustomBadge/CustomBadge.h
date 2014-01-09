@@ -26,16 +26,16 @@
 
 @interface CustomBadge : UIView
 
-@property(weak, nonatomic) NSString *badgeText;
-@property(weak, nonatomic) UIColor *badgeTextColor;
-@property(weak, nonatomic) UIColor *badgeInsetColor;
-@property(weak, nonatomic) UIColor *badgeFrameColor;
+@property(strong, nonatomic) NSString *badgeText;
+@property(strong, nonatomic) UIColor *badgeTextColor;
+@property(strong, nonatomic) UIColor *badgeInsetColor;
+@property(strong, nonatomic) UIColor *badgeFrameColor;
 
-@property(nonatomic,readwrite) BOOL badgeFrame;
-@property(nonatomic,readwrite) BOOL badgeShining;
+@property(nonatomic) BOOL badgeFrame;
+@property(nonatomic) BOOL badgeShining;
 
-@property(nonatomic,readwrite) CGFloat badgeCornerRoundness;
-@property(nonatomic,readwrite) CGFloat badgeScaleFactor;
+@property(nonatomic) CGFloat badgeCornerRoundness;
+@property(nonatomic) CGFloat badgeScaleFactor;
 
 + (CustomBadge*) customBadgeWithString:(NSString *)badgeString;
 + (CustomBadge*) customBadgeWithString:(NSString *)badgeString withStringColor:(UIColor*)stringColor withInsetColor:(UIColor*)insetColor withBadgeFrame:(BOOL)badgeFrameYesNo withBadgeFrameColor:(UIColor*)frameColor withScale:(CGFloat)scale withShining:(BOOL)shining;
