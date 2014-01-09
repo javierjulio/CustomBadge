@@ -94,9 +94,11 @@
 		retValue = CGSizeMake(25.f * _badgeScaleFactor, 25.f * _badgeScaleFactor);
 	}
   
-	self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, retValue.width, retValue.height);
-	self.badgeText = badgeString;
-	[self setNeedsDisplay];
+  self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, retValue.width, retValue.height);
+  self.badgeText = badgeString;
+  
+  [self invalidateIntrinsicContentSize];
+  [self setNeedsDisplay];
 }
 
 
