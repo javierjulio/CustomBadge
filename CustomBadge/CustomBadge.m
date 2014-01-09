@@ -30,6 +30,14 @@
 
 @implementation CustomBadge
 
+- (CGSize) intrinsicContentSize
+{
+  CGSize s = [super intrinsicContentSize];
+  CGSize stringSize = [self.badgeText sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:14.f]}];
+  
+  return CGSizeMake(s.width + 18.f + stringSize.width, s.height + 25.f);
+}
+
 // I recommend to use the allocator customBadgeWithString
 - (id) initWithString:(NSString *)badgeString withScale:(CGFloat)scale withShining:(BOOL)shining
 {
