@@ -38,6 +38,33 @@
   return CGSizeMake(s.width + 18.f + stringSize.width, s.height + 25.f);
 }
 
+- (void) setDefaults
+{
+  self.contentScaleFactor = [[UIScreen mainScreen] scale];
+  self.backgroundColor = [UIColor clearColor];
+  self.badgeText = @"";
+  self.badgeTextColor = [UIColor whiteColor];
+  self.badgeInsetColor = [UIColor colorWithRed:0xf2/255. green:0x6f/255. blue:0x1e/255. alpha:1.0];
+  self.badgeFrame = YES;
+  self.badgeFrameColor = [UIColor whiteColor];
+  self.badgeCornerRoundness = 0.4f;
+  self.badgeScaleFactor = 1.0;
+  self.badgeShining = NO;
+}
+
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+  if (self = [super initWithCoder:aDecoder]) {
+    [self setDefaults];
+  }
+  return self;
+}
+
+- (void) awakeFromNib
+{
+  [self setDefaults];
+}
+
 // I recommend to use the allocator customBadgeWithString
 - (id) initWithString:(NSString *)badgeString withScale:(CGFloat)scale withShining:(BOOL)shining
 {
