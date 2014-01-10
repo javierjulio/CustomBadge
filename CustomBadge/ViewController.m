@@ -68,13 +68,7 @@
                                                        withScale:1.0
                                                      withShining:NO];
   
-	CustomBadge *customBadge7 = [CustomBadge customBadgeWithString:@"234"
-                                                 withStringColor:[UIColor whiteColor]
-                                                  withInsetColor:[UIColor colorWithRed:0xf2/255. green:0x6f/255. blue:0x1e/255. alpha:1.0]
-                                                  withBadgeFrame:YES
-                                             withBadgeFrameColor:[UIColor whiteColor]
-                                                       withScale:1.0
-                                                     withShining:NO];
+	CustomBadge *customBadge7 = [CustomBadge customBadgeWithString:@"234"]; // test that defaults are applied (same as 5 and 6)
 	
   // Set positions
 	[customBadge1 setFrame:CGRectMake(self.view.frame.size.width/2-customBadge1.frame.size.width/2+customBadge2.frame.size.width/2, 110, customBadge1.frame.size.width, customBadge1.frame.size.height)];
