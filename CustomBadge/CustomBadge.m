@@ -77,7 +77,13 @@
 }
 
 // I recommend to use the allocator customBadgeWithString
-- (id) initWithString:(NSString *)badgeString withStringColor:(UIColor*)stringColor withInsetColor:(UIColor*)insetColor withBadgeFrame:(BOOL)badgeFrameYesNo withBadgeFrameColor:(UIColor*)frameColor withScale:(CGFloat)scale withShining:(BOOL)shining
+- (id) initWithString:(NSString *)badgeString
+      withStringColor:(UIColor *)stringColor
+       withInsetColor:(UIColor *)insetColor
+       withBadgeFrame:(BOOL)badgeFrameYesNo
+  withBadgeFrameColor:(UIColor *)frameColor
+            withScale:(CGFloat)scale
+          withShining:(BOOL)shining
 {
 	self = [super initWithFrame:CGRectMake(0.f, 0.f, 25.f, 25.f)];
 	if (self) {
@@ -119,14 +125,20 @@
 
 
 // Creates a Badge with a given Text 
-+ (CustomBadge*) customBadgeWithString:(NSString *)badgeString
++ (CustomBadge *) customBadgeWithString:(NSString *)badgeString
 {
 	return [[self alloc] initWithString:badgeString];
 }
 
 
 // Creates a Badge with a given Text, Text Color, Inset Color, Frame (YES/NO) and Frame Color 
-+ (CustomBadge*) customBadgeWithString:(NSString *)badgeString withStringColor:(UIColor*)stringColor withInsetColor:(UIColor*)insetColor withBadgeFrame:(BOOL)badgeFrameYesNo withBadgeFrameColor:(UIColor*)frameColor withScale:(CGFloat)scale withShining:(BOOL)shining
++ (CustomBadge *) customBadgeWithString:(NSString *)badgeString
+                        withStringColor:(UIColor *)stringColor
+                         withInsetColor:(UIColor *)insetColor
+                         withBadgeFrame:(BOOL)badgeFrameYesNo
+                    withBadgeFrameColor:(UIColor *)frameColor
+                              withScale:(CGFloat)scale
+                            withShining:(BOOL)shining
 {
 	return [[self alloc] initWithString:badgeString withStringColor:stringColor withInsetColor:insetColor withBadgeFrame:badgeFrameYesNo withBadgeFrameColor:frameColor withScale:scale withShining:shining];
 }
@@ -240,7 +252,9 @@
 		[_badgeTextColor set];
 		UIFont *textFont = [UIFont boldSystemFontOfSize:14.f];
 		CGSize textSize = [self.badgeText sizeWithAttributes:@{NSFontAttributeName:textFont}];
-		[self.badgeText drawAtPoint:CGPointMake((rect.size.width/2-textSize.width/2), (rect.size.height/2-textSize.height/2)) withAttributes:@{NSFontAttributeName:textFont, NSForegroundColorAttributeName: self.badgeTextColor}];
+    
+		[self.badgeText drawAtPoint:CGPointMake((rect.size.width/2-textSize.width/2), (rect.size.height/2-textSize.height/2))
+                 withAttributes:@{NSFontAttributeName:textFont, NSForegroundColorAttributeName: self.badgeTextColor}];
 	}
 }
 
