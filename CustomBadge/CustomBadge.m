@@ -66,38 +66,27 @@
 }
 
 // I recommend to use the allocator customBadgeWithString
-- (id) initWithString:(NSString *)badgeString withScale:(CGFloat)scale withShining:(BOOL)shining
+- (id) initWithString:(NSString *)badgeString
 {
 	self = [super initWithFrame:CGRectMake(0.f, 0.f, 25.f, 25.f)];
 	if (self) {
-		self.contentScaleFactor = [[UIScreen mainScreen] scale];
-		self.backgroundColor = [UIColor clearColor];
-		self.badgeText = badgeString;
-		self.badgeTextColor = [UIColor whiteColor];
-		self.badgeFrame = YES;
-		self.badgeFrameColor = [UIColor whiteColor];
-		self.badgeInsetColor = [UIColor redColor];
-		self.badgeCornerRoundness = 0.4f;
-		self.badgeScaleFactor = scale;
-		self.badgeShining = shining;
+    [self setDefaults];
 		[self autoBadgeSizeWithString:badgeString];
 	}
 	return self;
 }
 
 // I recommend to use the allocator customBadgeWithString
-- (id) initWithString:(NSString *)badgeString withStringColor:(UIColor*)stringColor withInsetColor:(UIColor*)insetColor withBadgeFrame:(BOOL)badgeFrameYesNo withBadgeFrameColor:(UIColor*)frameColor withScale:(CGFloat)scale withShining:(BOOL)shining 
+- (id) initWithString:(NSString *)badgeString withStringColor:(UIColor*)stringColor withInsetColor:(UIColor*)insetColor withBadgeFrame:(BOOL)badgeFrameYesNo withBadgeFrameColor:(UIColor*)frameColor withScale:(CGFloat)scale withShining:(BOOL)shining
 {
 	self = [super initWithFrame:CGRectMake(0.f, 0.f, 25.f, 25.f)];
 	if (self) {
-		self.contentScaleFactor = [[UIScreen mainScreen] scale];
-		self.backgroundColor = [UIColor clearColor];
+    [self setDefaults];
 		self.badgeText = badgeString;
 		self.badgeTextColor = stringColor;
 		self.badgeFrame = badgeFrameYesNo;
 		self.badgeFrameColor = frameColor;
 		self.badgeInsetColor = insetColor;
-		self.badgeCornerRoundness = 0.4f;
 		self.badgeScaleFactor = scale;
 		self.badgeShining = shining;
 		[self autoBadgeSizeWithString:badgeString];
@@ -132,7 +121,7 @@
 // Creates a Badge with a given Text 
 + (CustomBadge*) customBadgeWithString:(NSString *)badgeString
 {
-	return [[self alloc] initWithString:badgeString withScale:1.0f withShining:YES];
+	return [[self alloc] initWithString:badgeString];
 }
 
 
