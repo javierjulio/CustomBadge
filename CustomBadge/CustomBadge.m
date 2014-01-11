@@ -60,11 +60,6 @@
   return self;
 }
 
-- (void) awakeFromNib
-{
-  [self setDefaults];
-}
-
 // I recommend to use the allocator customBadgeWithString
 - (id) initWithString:(NSString *)badgeString
 {
